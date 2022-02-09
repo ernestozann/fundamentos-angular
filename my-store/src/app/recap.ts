@@ -9,5 +9,5 @@ class Person {
 }
 
 const eru = new Person(22,"Martinez");
-eru.age;
+// eru.age;
 /*error intencional para mostrar la definicion de private */
