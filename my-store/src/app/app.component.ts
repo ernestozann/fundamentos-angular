@@ -8,5 +8,21 @@ import { Component } from '@angular/core';
 export class AppComponent {
   name = 'Eru';
   age = 22;
-  img = 'https://source.unsplash.com/random'
+  img = 'https://source.unsplash.com/random';
+  btnDisabled = true;
+  person = {
+    age: 22,
+    name: "ernestozann",
+    avatar: 'https://source.unsplash.com/random',
+  }
+
+  toogleButton() {
+    this.btnDisabled = !this.btnDisabled;
+  }
+  addAge() {
+    this.person.age += 1;
+  }
+  decreaseAge() {
+    this.person.age -= 1;
+  }
 }
