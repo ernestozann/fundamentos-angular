@@ -16,6 +16,9 @@ export class AppComponent {
     avatar: 'https://source.unsplash.com/random',
   }
 
+  emojis: string[] = [ '😂' , '🐦', '🐳','🌮', '💚']
+  newName: string = ''
+
   toogleButton() {
     this.btnDisabled = !this.btnDisabled;
   }
@@ -32,5 +35,12 @@ export class AppComponent {
   onWrite(event: Event) {
     const element = event.target as HTMLInputElement;
     this.person.name = element.value;
+  }
+  addEmoji() {
+    this.emojis.push(this.newName)
+    this.newName = ''
+  }
+  removeEmoji(index:number) {
+    this.emojis.splice(index, 1)
   }
 }

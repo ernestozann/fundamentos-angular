@@ -1,3 +1,14 @@
+<h1>*ngFor</h1>
+<input type="text" required [(ngModel)]="newName">
+<button (click)="addEmoji()">Add emoji</button>
+<ul>
+  <li *ngIf="emojis.length === 0">We run out of emojis</li>
+  <li *ngFor="let emoji of emojis; index as index">
+    {{emoji}} {{index}}
+    <button (click)="removeEmoji(index)">X</button>
+  </li>
+</ul>
+<hr/>
 <h1>*ngIf</h1>
 <input type="text" required [(ngModel)]="person.name">
 <p *ngIf="person.name == 'eru' && person.age >= 18 ; else elseBlock">welcome back eru n.n/</p>
