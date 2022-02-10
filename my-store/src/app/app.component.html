@@ -23,9 +23,9 @@
 </p> -->
 <hr/>
 <h1>*ngFor Objs</h1>
-<div>
+<div class="products--grid">
   <div *ngFor="let product of products">
-    <img width="250px" [src]="product.image" [alt]="product.name">
+    <img [src]="product.image" [alt]="product.name">
     <h2>${{product.price}}</h2>
     <p>{{product.name}}</p>
   </div>
